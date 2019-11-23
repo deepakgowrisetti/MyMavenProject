@@ -8,6 +8,7 @@ public class Sample2 {
   @Test
   public void b() {
 	  System.out.println("@test B");
+	  System.out.println("Test GIT");
   }
   @Test
   public void a() {
