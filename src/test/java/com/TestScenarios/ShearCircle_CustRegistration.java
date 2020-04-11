@@ -40,7 +40,7 @@ public class ShearCircle_CustRegistration extends StaticVaraibles {
 	public void login() throws IOException {
 		// get the data from property file
 
-		String path = "./testData/TD.properties";
+		String path = "./testData/ShearCir.properties";
 		File f = new File(path);
 		FileInputStream fi = new FileInputStream(f);
 

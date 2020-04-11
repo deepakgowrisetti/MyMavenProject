@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 public class Locaters {
 
-	public static final By Email_EditBox = By.id("CustomerEmail");
+	public static final By Email_EditBox = By.id("email");
 	public static final By Password_EditBox = By.id("CustomerPassword");
 	public static final By Login_Button = By.id("loginbutton");
 	public static final By signin_icon = By.xpath("//a[@href='/account/login']");
@@ -37,6 +37,26 @@ public class Locaters {
 	//Frame URL
 	public static final By zonal_Link = By.name("P-24Alist");
 	public static final By lastUpdate = By.xpath("/html/body/table/tbody/tr[8]/td[2]/span");
+	
+	
+	//Avion
+	public static final By Auser_Name = By.id("unamebean");
+	public static final By Apwd = By.id("pwdbean");
+	public static final By ASubmit = By.id("SubmitButton");
+	//public static final By APOS = By.id("POS_PRODUCT");
+	public static final By APOS = By.xpath("(//*[@id = 'POS_ACCOUNT'])[1]");
+	public static final By AGO	= By.id("CreateInvBtn");
+	public static final By APON = By.id("PoNumber");
+	public static final By AGO1 = By.xpath("(//*[@class = 'x7n'])[4]");
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

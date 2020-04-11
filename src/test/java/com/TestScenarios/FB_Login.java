@@ -31,6 +31,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 
 public class FB_Login extends StaticVaraibles {
+	
 	// WebDriver driver;
 
 	// create reference of CommonFunctions class to re-use of functions
@@ -51,6 +52,7 @@ public class FB_Login extends StaticVaraibles {
 		cfn.sendKeysByanyLocater(obj.Email_EditBox, p.getProperty("Email"));
 		cfn.sendKeysByanyLocater(obj.Password_EditBox, p.getProperty("password"));
 		cfn.clickByanyLocater(obj.Login_Button);
+		
 
 	}
 
@@ -73,4 +75,9 @@ public class FB_Login extends StaticVaraibles {
 		driver.quit();
 	}
 
+	
+	
+	
+	
+	
 }

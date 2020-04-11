@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 import org.openqa.selenium.By;
@@ -17,6 +18,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.io.FileHandler;
 import org.testng.ITestResult;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CommonFunctions extends StaticVaraibles {
 
@@ -41,9 +44,13 @@ public class CommonFunctions extends StaticVaraibles {
 
 	// Chrome browser launch
 	public void chromeBrowserLaunch() {
-		System.setProperty("webdriver.chrome.driver", ".\\browserDrivers\\chromedriver_78\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", ".\\browserDrivers\\chromedriver.exe");
+		WebDriverManager.chromedriver().version("80").setup();
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
+		
+		
+		
 
 	}
 
@@ -73,6 +80,14 @@ public class CommonFunctions extends StaticVaraibles {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+
+	public void switchtotab(int tabINdex) throws Exception {
+		Thread.sleep(5000);
+		ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tabs.get(tabINdex));
+		// driver.close();
+		// driver.switchTo().window(tabs2.get(0));
 	}
 
 	// WebDriver driver;

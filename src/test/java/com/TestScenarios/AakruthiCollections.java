@@ -35,17 +35,22 @@ public class AakruthiCollections extends StaticVaraibles {
 	// create reference of CommonFunctions class to re-use of functions
 	CommonFunctions cfn = new CommonFunctions();
 	Locaters obj = new Locaters();
+	
+	
+	
+	
 
-	@Test // 2
+	@Test // 1
 	public void TC_001_login() throws IOException {
 		// get the data from property file
 
-		String path = "./testData/aakruthi.properties";
+	   String path = "./testData/aakruthi.properties";
 		File f = new File(path);
 		FileInputStream fi = new FileInputStream(f);
 
 		Properties p = new Properties();
 		p.load(fi);
+		
 		driver.get(p.getProperty("URL"));
 		cfn.clickByanyLocater(obj.signin_icon);
 		// cfn.sendKeysByanyLocater(obj.signin_icon, p.getProperty("icon"));
@@ -67,6 +72,8 @@ public class AakruthiCollections extends StaticVaraibles {
 		Properties p = new Properties();
 		p.load(fi);
 		
+		driver.get(p.getProperty("URL"));
+		System.out.println("2nd Executed");
 	  // cfn.clickByanyLocater(locater);
 		
 		
