@@ -44,8 +44,8 @@ public class CommonFunctions extends StaticVaraibles {
 
 	// Chrome browser launch
 	public void chromeBrowserLaunch() {
-		//System.setProperty("webdriver.chrome.driver", ".\\browserDrivers\\chromedriver.exe");
-		WebDriverManager.chromedriver().version("80").setup();
+		System.setProperty("webdriver.chrome.driver", ".\\browserDrivers\\chromedriver.exe");
+		//WebDriverManager.chromedriver().version("80").setup();
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		

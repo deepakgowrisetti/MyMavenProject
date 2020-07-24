@@ -1,5 +1,7 @@
 package com.Objectrepository;
 
+
+
 import org.openqa.selenium.By;
 
 public class Locaters {
@@ -49,14 +51,42 @@ public class Locaters {
 	public static final By APON = By.id("PoNumber");
 	public static final By AGO1 = By.xpath("(//*[@class = 'x7n'])[4]");
 	
+	//Ariba
+	public static final By Ari_user = By.xpath("//input[@name= 'UserName']");	
+	public static final By Ari_pwd = By.xpath("//input[@id= 'Password']");	
+	public static final By Ari_Submit = By.xpath("//input[@type= 'submit']");
+	public static final By Pro_Quest = By.xpath("(//button[@class= 'fd-product-menu__control'])[1]");
+	//fd-product-menu__control
 	
+	//public static final By fd_Menu = By.xpath("//a[@class= 'fd-menu__item app-menuitem-text'])[3]");
+	//(//a[@class= 'fd-menu__item app-menuitem-text'])[3]
+	//fd-menu__item app-menuitem-text
+	//public static final By fd_Menu = By.linkText("fd-menu__item app-menuitem-text");
+	public static final By fd_Menu = By.xpath("/html/body/div[5]/table/tbody/tr[1]/td/div/div/div/div[1]/div/div/div/div/div[2]/nav/ul/li[4]/a");
+	public static final By fd_inbox = By.xpath("(//*[@class = 'w-tabitem-a'])[2]");
+	public static final By Menu_Ord_rel = By.id("_vilcyd");
+	public static final By Search_Fil = By.xpath("//*[@id= '_y9ecwd']");
+	public static final By Exact_num = By.xpath ("(//*[@id= '_h8bvdb']/div[2])");  //radio button
+	//(//*[@class = 'w-rdo w-rdo-dsize'])[2]
+	public static final By Ord_Txtbox = By.id("_qrdcnd");
+	public static final By inbox_button = By.xpath("//button[@class= 'w-btn w-btn-primary']");
 	
+	public static final By OR_radiobutton = By.xpath("html/body/div[5]/div[3]/table/tbody/tr/td[1]/table/tbody/tr[4]/td/table/tbody/tr/td/div/div/div/table/tbody/tr/td/span/div/div/table/tbody/tr/td/div/div/div[2]/div/div/table/tbody/tr/td/form/table/tbody/tr[2]/td/div[1]/table/tbody/tr[2]/td/table/tbody/tr[2]/td[1]/div");
 	
+	//create invoice_invoice header
 	
+	//driver.findElement(By.id("_kipfyb")).sendKeys("Test");
+	public static final By Invoice_Text = By.id("_kipfyb");
+	public static final By Invoice_date = By.id("DF_8de92b");
+	//driver.findElement(By.id("_dmad7d")).click();//remove button
+	public static final By Invoice_email = By.xpath("//*[@id = '_vcdb9']");
+	//*[@id="_vcdb9"]
 	
-	
-	
-	
+	//AIM
+	public static final By Aim_User  = By.id("asPrimary_ctl00_txtLoginId");
+	public static final By Aim_Pwd  = By.id("asPrimary_ctl00_txtPassWord");
+	public static final By Aim_Submit  = By.id("asPrimary_ctl00_btnSubmit");
+	public static final By Aim_agree =  By.id("asPrimary_ctl00_cmdAgreeContinue");
 	
 	
 	

@@ -65,7 +65,7 @@ public class FB_Login extends StaticVaraibles {
 
 	@Parameters("browser")
 	@BeforeClass // 1
-	public void beforeClass(@Optional("chrome") String browser) {
+	public void beforeClass(@Optional("firefox") String browser) {
 		cfn.browserLaunch(browser);
 
 	}

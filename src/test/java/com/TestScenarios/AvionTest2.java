@@ -129,15 +129,29 @@ public class AvionTest2 extends StaticVaraibles {
 			driver.findElement(By.xpath("//*[@id = 'InvoiceNum']")).sendKeys(s.getCell(2, i).getContents());
 			driver.findElement(By.xpath("//*[@id = 'InvDesc']")).sendKeys(s.getCell(3, i).getContents());
 			//driver.findElement(By.xpath("//*[@id = 'N3:QUANTITY:0']")).sendKeys(s.getCell(4, i).getContents());
-
+			//WebElement Date1  = driver.findElement(By.xpath("//*[@id = 'InvoiceDate']"));
+			//System.out.println("My Date :"+Date1);
+            // Date1.sendKeys(s.getCell(4, i).getContents());
+             //System.out.println("Date Printed ");
+		    String excelDate = s.getCell(4,i).getContents();
+		    System.out.println("Myexcel date :"+excelDate );
+		    driver.findElement(By.xpath("//*[@id = 'InvoiceDate']")).clear();
+		    driver.findElement(By.xpath("//*[@id = 'InvoiceDate']")).sendKeys(excelDate);
+		    
+		    //driver.findElement(By.xpath("//*[@id = 'InvoiceDate']")).sendKeys("04/04/1981");
+		    //InvoiceDateFrom:dateButton
 			cfn.clickByJSE(By.xpath("(//button[@title ='Next'])[1]"));
 			// driver.findElement(By.xpath("(//button[@title ='Next'])[1]")).click();
 			Thread.sleep(5000);
 			cfn.clickByJSE(By.xpath("(//button[@title ='Next'])[1]"));
-			cfn.clickByJSE(By.xpath("//button[@id= 'CancelButton']"));
+			cfn.clickByJSE(By.xpath("(//button[@title ='Next'])[4]"));
+			//cfn.clickByJSE(By.xpath("//button[@id= 'CancelButton']"));
+			cfn.clickByJSE(By.xpath("(//button[@title = 'Submit'])[1]"));
+			cfn.takescreenshot("Invoice");
+			
 			cfn.clickByanyLocater(By.xpath("//*[@id = 'POS_HOME']"));
 			System.out.println("loop complete");
-
+		  
 			// }
 
 		} // for loop end
